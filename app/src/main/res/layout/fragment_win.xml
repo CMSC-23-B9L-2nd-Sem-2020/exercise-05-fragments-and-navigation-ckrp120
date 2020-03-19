@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Win">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bgwin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/grand_hotel"
+            android:shadowColor="@android:color/darker_gray"
+            android:shadowDx="30"
+            android:shadowDy="40"
+            android:shadowRadius="50"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/congrats"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/p"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/grand_hotel"
+            android:shadowColor="@android:color/darker_gray"
+            android:shadowDx="30"
+            android:shadowDy="40"
+            android:shadowRadius="50"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:text="@string/player"
+            android:textSize="50sp"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="for finishing the game in"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/grand_hotel"
+            android:shadowColor="@android:color/darker_gray"
+            android:shadowDx="30"
+            android:shadowDy="40"
+            android:shadowRadius="50"
+            android:text="@string/n_steps"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="16dp"
+            android:background="#131111"
+            android:fontFamily="@font/grand_hotel"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:shadowRadius="20"
+            android:text="@string/restart"
+            android:textColor="#EEFFFFFF" />
+    </LinearLayout>
+</FrameLayout>
+
+</layout>

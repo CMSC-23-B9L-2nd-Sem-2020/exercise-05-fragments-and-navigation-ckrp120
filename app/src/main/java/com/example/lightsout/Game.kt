@@ -11,6 +11,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.lightsout.databinding.FragmentGame2Binding
 import kotlinx.android.synthetic.main.fragment_game2.*
 
@@ -53,7 +56,7 @@ class Game : Fragment(){
       fun updateNickname(){
            binding.apply {
                val myActivity = activity as MainActivity?
-
+               myActivity?.tap = "0"
                nickname.visibility = View.GONE
                nicknameShow.text = myActivity?.playerName.toString()
                nicknameShow.visibility = View.VISIBLE
@@ -80,7 +83,7 @@ class Game : Fragment(){
         fun countUp(view: View) { //adds +1 to the counter whenever the player taps a light and updates the textView
             val myActivity = activity as MainActivity?
             tapCount++
-            myActivity?.tap = tapCount
+            myActivity?.tap = tapCount.toString()
             if(tapShowCount !== null){
                 tapShowCount.text = tapCount.toString()
             }
@@ -88,7 +91,7 @@ class Game : Fragment(){
 
         fun flipLights(view: View, row: Int, col: Int) { //main function for toggling lights on/off
             //toggles retry button visibility at the start
-
+            binding.retry.visibility = View.VISIBLE
             //flip light itself
             val mainLight: ImageView = getID(row, col)
             if(gameGrid[row][col] == 0){
@@ -161,9 +164,9 @@ class Game : Fragment(){
                 }
             }
 
-            //shows a toast when the player has successfully turned off all the lights
+            //goes to congratulatory screen if player turns off all the lights
             if(playerWin){
-
+                view.findNavController().navigate(R.id.action_game_to_win)
             }
         }
 
@@ -178,7 +181,9 @@ class Game : Fragment(){
         }
 
         fun retry(){ //resets the game
+            val myActivity = activity as MainActivity?
             tapCount = 0
+            myActivity?.tap = tapCount.toString()
             if(tapShowCount !== null){
                 tapShowCount.text = tapCount.toString()
             }
@@ -192,16 +197,14 @@ class Game : Fragment(){
                 }
             }
         }
-
-        binding.retry.setOnClickListener { retry() }
         updateNickname()
+        binding.retry.setOnClickListener { retry() }
+
         setListeners()
 
 
       return binding.root
 }
-
-
 
 
 

@@ -13,11 +13,28 @@
         <action
             android:id="@+id/action_titleScreen_to_game"
             app:destination="@id/game"
-            app:popUpTo="@+id/titleScreen" />
+            app:popUpTo="@+id/titleScreen"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/game"
         android:name="com.example.lightsout.Game"
         android:label="fragment_game2"
-        tools:layout="@layout/fragment_game2" />
+        tools:layout="@layout/fragment_game2" >
+        <action
+            android:id="@+id/action_game_to_win"
+            app:destination="@id/win"
+            app:popUpTo="@+id/titleScreen"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/win"
+        android:name="com.example.lightsout.Win"
+        android:label="Win">
+        <action
+            android:id="@+id/action_win_to_titleScreen"
+            app:destination="@id/titleScreen"
+            app:popUpTo="@+id/titleScreen"
+            app:popUpToInclusive="false" />
+    </fragment>
 </navigation>

@@ -22,7 +22,7 @@ import com.example.lightsout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     var playerName: String = ""
-    var tap: Int = 0
+    var tap: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
