@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleScreen">
+
+    <fragment
+        android:id="@+id/titleScreen"
+        android:name="com.example.lightsout.TitleScreen"
+        android:label="TitleScreen"
+        tools:layout="@layout/fragment_title_screen">
+        <action
+            android:id="@+id/action_titleScreen_to_game"
+            app:destination="@id/game"
+            app:popUpTo="@+id/titleScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/game"
+        android:name="com.example.lightsout.Game"
+        android:label="fragment_game2"
+        tools:layout="@layout/fragment_game2" />
+</navigation>

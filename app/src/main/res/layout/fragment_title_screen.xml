@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="player"
+            type="com.example.lightsout.UserInfo" />
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TitleScreen"
+        android:background="@drawable/titlebg">
+
+        <!-- TODO: Update blank fragment layout -->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/grand_hotel"
+                android:shadowColor="@android:color/darker_gray"
+                android:shadowDx="30"
+                android:shadowDy="40"
+                android:shadowRadius="50"
+                android:text="@string/title"
+                android:textColor="#FFFFFF"
+                android:textSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.807"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.346" />
+
+            <EditText
+                android:id="@+id/nickname"
+                style="@style/name"
+                android:layout_width="186dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="33dp"
+                android:ems="10"
+                android:hint="@string/nickname"
+                android:inputType="textPersonName"
+                android:text="@string/blank"
+                android:textColorHighlight="#00FFFFFF"
+                android:textColorHint="#FCF9F9"
+                android:textColorLink="#FFFFFF"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.88"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#131111"
+                android:fontFamily="@font/grand_hotel"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="20"
+                android:shadowDy="20"
+                android:shadowRadius="20"
+                android:text="@string/start"
+                android:textColor="#EEFFFFFF"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.758"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nickname"
+                app:layout_constraintVertical_bias="0.085" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+</layout>

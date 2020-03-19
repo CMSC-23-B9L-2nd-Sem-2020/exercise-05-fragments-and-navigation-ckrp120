@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Lights Out</string>
+    <string name="title">Lights Out</string>
+    <string name="nickname">Enter your nickname</string>
+    <string name="tapcount">0</string>
+    <string name="retry">retry</string>
+    <string name="taps">Taps:</string>
+    <string name="submit">Submit</string>
+    <string name="blank" />
+    <string name="toast_message">You win!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start">START</string>
+</resources>
